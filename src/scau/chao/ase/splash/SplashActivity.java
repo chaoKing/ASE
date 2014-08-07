@@ -9,8 +9,10 @@ import scau.chao.ase.MainActivity;
 import scau.chao.ase.R;
 import scau.chao.ase.guide.GuideActivity;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -37,6 +39,9 @@ public class SplashActivity extends Activity {
 
   // 新加的播放控件
   private VideoView videoView;
+
+  // 保存第一次启动软件的数据
+  SharedPreferences preferences;
 
   /**
    * Handler:跳转到不同界面
@@ -92,7 +97,7 @@ public class SplashActivity extends Activity {
   private void init() {
     // 读取SharedPreferences中需要的数据
     // 使用SharedPreferences来记录程序的使用次数
-    SharedPreferences preferences = getSharedPreferences(SHAREDPREFERENCES_NAME, MODE_PRIVATE);
+     preferences = getSharedPreferences(SHAREDPREFERENCES_NAME, MODE_PRIVATE);
 
     // 取得相应的值，如果没有该值，说明还未写入，用true作为默认值
     isFirstIn = preferences.getBoolean("isFirstStart1", true);
@@ -102,9 +107,22 @@ public class SplashActivity extends Activity {
       // 使用Handler的postDelayed方法，3秒后执行跳转到MainActivity
       mHandler.sendEmptyMessageDelayed(GO_HOME, SPLASH_DELAY_MILLIS);
     } else {
+      setGuided();
       mHandler.sendEmptyMessageDelayed(GO_GUIDE, SPLASH_DELAY_MILLIS);
     }
 
+  }
+
+  /**
+   * 
+   * method desc：设置已经引导过了，下次启动不用再次引导
+   */
+  private void setGuided() {
+    Editor editor = preferences.edit();
+    // 存入数据
+    editor.putBoolean("isFirstStart1", false);
+    // 提交修改
+    editor.commit();
   }
 
   private void goHome() {
