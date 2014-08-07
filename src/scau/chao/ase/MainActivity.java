@@ -7,8 +7,12 @@ package scau.chao.ase;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -35,9 +39,27 @@ public class MainActivity extends ActionBarActivity {
     listView
         .setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, strings));
 
+    listView.setOnItemClickListener(new OnItemClickListener() {
+
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Log.d("listView", "position = " + position);
+        switch (position) {
+          case 0:
+
+            break;
+          case 1:
+
+            break;
+          default:
+            break;
+        }
+
+      }
+    });
+
 
   }
-
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
