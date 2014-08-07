@@ -33,7 +33,8 @@ public class MainActivity extends ActionBarActivity {
 
   private ListView listView;
 
-  private static final String[] STRINGS = new String[] {"Drag Image Gallery", "choose dialog"};
+  private static final String[] STRINGS = new String[] {"Drag Image Gallery", "Choose Dialog",
+      "Check EditText"};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,9 @@ public class MainActivity extends ActionBarActivity {
             break;
           case 1:
             goToTheSecondExample();
+            break;
+          case 2:
+            goToTheThirdExample();
             break;
           default:
             break;
@@ -104,6 +108,16 @@ public class MainActivity extends ActionBarActivity {
             dialog.dismiss();
           }
         }).show();
+  }
+
+
+
+  /**
+   * EditText的预编写及预判
+   */
+  private void goToTheThirdExample() {
+    // TODO Auto-generated method stub
+
   }
 
   @Override
