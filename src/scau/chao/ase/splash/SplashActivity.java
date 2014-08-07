@@ -33,7 +33,7 @@ public class SplashActivity extends Activity {
   private static final int GO_HOME = 1000;
   private static final int GO_GUIDE = 1001;
   // 延迟3秒
-  private static final long SPLASH_DELAY_MILLIS = 100;
+  private static final long SPLASH_DELAY_MILLIS = 1500;
 
   private static final String SHAREDPREFERENCES_NAME = "first_start_info";
 
@@ -65,11 +65,11 @@ public class SplashActivity extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_splash_3gp);
+    setContentView(R.layout.activity_splash);
 
-    toShowVideo();
+    // toShowVideo();
 
-    // init();
+    init();
   }
 
   /**
@@ -97,7 +97,7 @@ public class SplashActivity extends Activity {
   private void init() {
     // 读取SharedPreferences中需要的数据
     // 使用SharedPreferences来记录程序的使用次数
-     preferences = getSharedPreferences(SHAREDPREFERENCES_NAME, MODE_PRIVATE);
+    preferences = getSharedPreferences(SHAREDPREFERENCES_NAME, MODE_PRIVATE);
 
     // 取得相应的值，如果没有该值，说明还未写入，用true作为默认值
     isFirstIn = preferences.getBoolean("isFirstStart1", true);
