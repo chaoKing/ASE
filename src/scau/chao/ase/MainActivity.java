@@ -1,16 +1,26 @@
+/**
+ * Copyright (c) 广州顶九信息技术有限公司 2014 版权所有
+ * 
+ * 文件创建时间：2014-8-7
+ */
 package scau.chao.ase;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 
+/**
+ * 
+ * 软件主界面
+ * 
+ * @author 蔡超敏
+ *
+ */
 public class MainActivity extends ActionBarActivity {
 
   @Override
