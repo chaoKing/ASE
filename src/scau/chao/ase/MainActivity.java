@@ -6,6 +6,9 @@
 package scau.chao.ase;
 
 import scau.chao.ase.dragimage.DragImageActivity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -17,6 +20,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 /**
  * 
@@ -29,7 +33,7 @@ public class MainActivity extends ActionBarActivity {
 
   private ListView listView;
 
-  private static final String[] strings = new String[] {"Drag Image Gallery", "test"};
+  private static final String[] STRINGS = new String[] {"Drag Image Gallery", "choose dialog"};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
     listView = (ListView) findViewById(R.id.showListView);
 
     listView
-        .setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, strings));
+        .setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, STRINGS));
 
     listView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -51,13 +55,14 @@ public class MainActivity extends ActionBarActivity {
             goToTheFirstExample();
             break;
           case 1:
-
+            goToTheSecondExample();
             break;
           default:
             break;
         }
 
       }
+
     });
   }
 
@@ -67,6 +72,38 @@ public class MainActivity extends ActionBarActivity {
   private void goToTheFirstExample() {
     Intent intent = new Intent(this, DragImageActivity.class);
     startActivity(intent);
+  }
+
+  private static final String[] ALERTDAILOG_STRING = new String[] {"Apple", "Banana", "Bullace",
+      "Coconut", "Date", "Durian", "Haw", "Honey-dew melon", "Juicy peach", "Kernel fruit",
+      "Cherry"};
+
+  /**
+   * AlertDialog.Builder
+   */
+  private void goToTheSecondExample() {
+    new AlertDialog.Builder(this).setTitle("choose your need!")
+        .setItems(ALERTDAILOG_STRING, new OnClickListener() {
+
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+            new AlertDialog.Builder(MainActivity.this)
+                .setMessage("your need is " + ALERTDAILOG_STRING[which])
+                .setNeutralButton("OK", new OnClickListener() {
+
+                  @Override
+                  public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(MainActivity.this, "ok~~~", Toast.LENGTH_LONG).show();
+                  }
+                }).show();
+          }
+        }).setNegativeButton("cancel", new OnClickListener() {
+
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+            dialog.dismiss();
+          }
+        }).show();
   }
 
   @Override
