@@ -1,10 +1,12 @@
 /**
- * Copyright (c) 广州顶九信息技术有限公司 2014 版权所有
+ * Copyright (c) 华楠农业大学蔡超敏 2014 版权所有
  * 
  * 文件创建时间：2014-8-7
  */
 package scau.chao.ase;
 
+import scau.chao.ase.dragimage.DragImageActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -27,7 +29,7 @@ public class MainActivity extends ActionBarActivity {
 
   private ListView listView;
 
-  private static final String[] strings = new String[] {"four", "five"};
+  private static final String[] strings = new String[] {"Drag Image Gallery", "test"};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
         Log.d("listView", "position = " + position);
         switch (position) {
           case 0:
-
+            goToTheFirstExample();
             break;
           case 1:
 
@@ -57,8 +59,14 @@ public class MainActivity extends ActionBarActivity {
 
       }
     });
+  }
 
-
+  /**
+   * 拖拉图片例子
+   */
+  private void goToTheFirstExample() {
+    Intent intent = new Intent(this, DragImageActivity.class);
+    startActivity(intent);
   }
 
   @Override

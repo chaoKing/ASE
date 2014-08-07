@@ -33,6 +33,11 @@
             android:name="scau.chao.ase.guide.GuideActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
+        <activity
+            android:name="scau.chao.ase.dragimage.DragImageActivity"
+            android:label="@string/gallery"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
     </application>
 
 </manifest>
