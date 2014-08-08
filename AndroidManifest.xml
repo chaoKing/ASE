@@ -8,6 +8,8 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.READ_SMS" />
+
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -37,6 +39,14 @@
             android:name="scau.chao.ase.dragimage.DragImageActivity"
             android:label="@string/gallery"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="scau.chao.ase.edittextsearch.EditTextSearchActivity"
+            android:label="@string/title_activity_edit_text_search" >
+        </activity>
+        <activity
+            android:name="scau.chao.ase.autocompletetext.AutoCompleteTextActivity"
+            android:label="@string/title_activity_auto_complete_text" >
         </activity>
     </application>
 

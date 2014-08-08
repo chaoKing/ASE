@@ -8,5 +8,9 @@
     <string name="title_activity_guide">GuideActivity</string>
     <string name="hello">hello</string>
     <string name="gallery">Gallery</string>
+    <string name="title_activity_edit_text_search">EditTextSearchActivity</string>
+    <string name="title_activity_auto_complete_text">AutoCompleteTextActivity</string>
+    <string name="autocompletetextview">AutoCompleteTextView</string>
+    <string name="multiautocompletetextview">MultiAutoCompleteTextView</string>
 
 </resources>

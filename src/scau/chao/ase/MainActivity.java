@@ -5,7 +5,9 @@
  */
 package scau.chao.ase;
 
+import scau.chao.ase.autocompletetext.AutoCompleteTextActivity;
 import scau.chao.ase.dragimage.DragImageActivity;
+import scau.chao.ase.edittextsearch.EditTextSearchActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -34,7 +36,7 @@ public class MainActivity extends ActionBarActivity {
   private ListView listView;
 
   private static final String[] STRINGS = new String[] {"Drag Image Gallery", "Choose Dialog",
-      "Check EditText"};
+      "Check EditText", "Auto Complete Text"};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,9 @@ public class MainActivity extends ActionBarActivity {
             break;
           case 2:
             goToTheThirdExample();
+            break;
+          case 3:
+            goToTheFourthExample();
             break;
           default:
             break;
@@ -116,9 +121,19 @@ public class MainActivity extends ActionBarActivity {
    * EditText的预编写及预判
    */
   private void goToTheThirdExample() {
-    // TODO Auto-generated method stub
-
+    Intent intent = new Intent(this, EditTextSearchActivity.class);
+    startActivity(intent);
   }
+
+
+  /**
+   * 自动提示补充text
+   */
+  private void goToTheFourthExample() {
+    Intent intent = new Intent(this, AutoCompleteTextActivity.class);
+    startActivity(intent);
+  }
+
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
