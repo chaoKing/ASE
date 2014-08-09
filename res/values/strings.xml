@@ -14,5 +14,11 @@
     <string name="multiautocompletetextview">MultiAutoCompleteTextView</string>
     <string name="spinner">spinner</string>
     <string name="title_activity_spinner_animation">SpinnerAnimationActivity</string>
+    <string name="str_title">猜猜看红心A是哪一张?</string>
+    <string name="str_button">再玩一次</string>
+    <string name="title_activity_play_guess_placard">PlayGuessPlacardActivity</string>
+    <string name="one">one</string>
+    <string name="two">two</string>
+    <string name="three">three</string>
 
 </resources>

@@ -8,6 +8,7 @@ package scau.chao.ase;
 import scau.chao.ase.autocompletetext.AutoCompleteTextActivity;
 import scau.chao.ase.dragimage.DragImageActivity;
 import scau.chao.ase.edittextsearch.EditTextSearchActivity;
+import scau.chao.ase.playguessplacard.PlayGuessPlacardActivity;
 import scau.chao.ase.spinneranimation.SpinnerAnimationActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -37,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
   private ListView listView;
 
   private static final String[] STRINGS = new String[] {"Drag Image Gallery", "Choose Dialog",
-      "Check EditText", "Auto Complete Text", "Spinner Animation"};
+      "Check EditText", "Auto Complete Text", "Spinner Animation", "Play Guess Placard"};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,9 @@ public class MainActivity extends ActionBarActivity {
             break;
           case 4:
             goToTheFifthExample();
+            break;
+          case 5:
+            goToTheSixthExample();
             break;
           default:
             break;
@@ -146,6 +150,14 @@ public class MainActivity extends ActionBarActivity {
   }
 
 
+
+  /**
+   * 猜猜红桃A在哪里
+   */
+  private void goToTheSixthExample() {
+    Intent intent = new Intent(this, PlayGuessPlacardActivity.class);
+    startActivity(intent);
+  }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
