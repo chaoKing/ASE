@@ -22,5 +22,11 @@
     <string name="three">three</string>
     <string name="shrink">缩小</string>
     <string name="magnify">放大</string>
+    <string name="turn_right">turn right</string>
+    <string name="turn_left">turn left</string>
+    <string name="thitle_activity_magnify_shrink_image">MagnifyShrinkImageActivity</string>
+    <string name="title_activity_rotate_image">RotateImageActivity</string>
+    <string name="down">down</string>
+    <string name="bigger">bigger</string>
 
 </resources>

@@ -57,7 +57,11 @@
         </activity>
         <activity
             android:name="scau.chao.ase.magnifyshrinkimage.MagnifyShrinkImageActivity"
-            android:label="MagnifyShrinkImageActivity" >
+            android:label="@string/thitle_activity_magnify_shrink_image" >
+        </activity>
+        <activity
+            android:name="scau.chao.ase.rotateimage.RotateImageActivity"
+            android:label="@string/title_activity_rotate_image" >
         </activity>
     </application>
 
