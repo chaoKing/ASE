@@ -1,7 +1,9 @@
 ASE
 ===
 1.定义控件样式。
+
 步骤：
+
 a.写样式。
 格式：
   <style name=string [parent=string]>
