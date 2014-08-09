@@ -48,6 +48,10 @@
             android:name="scau.chao.ase.autocompletetext.AutoCompleteTextActivity"
             android:label="@string/title_activity_auto_complete_text" >
         </activity>
+        <activity
+            android:name="scau.chao.ase.spinneranimation.SpinnerAnimationActivity"
+            android:label="@string/title_activity_spinner_animation" >
+        </activity>
     </application>
 
 </manifest>

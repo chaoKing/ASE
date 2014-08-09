@@ -8,6 +8,7 @@ package scau.chao.ase;
 import scau.chao.ase.autocompletetext.AutoCompleteTextActivity;
 import scau.chao.ase.dragimage.DragImageActivity;
 import scau.chao.ase.edittextsearch.EditTextSearchActivity;
+import scau.chao.ase.spinneranimation.SpinnerAnimationActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -36,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
   private ListView listView;
 
   private static final String[] STRINGS = new String[] {"Drag Image Gallery", "Choose Dialog",
-      "Check EditText", "Auto Complete Text"};
+      "Check EditText", "Auto Complete Text", "Spinner Animation"};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +67,14 @@ public class MainActivity extends ActionBarActivity {
           case 3:
             goToTheFourthExample();
             break;
+          case 4:
+            goToTheFifthExample();
+            break;
           default:
             break;
         }
 
       }
-
     });
   }
 
@@ -133,6 +136,15 @@ public class MainActivity extends ActionBarActivity {
     Intent intent = new Intent(this, AutoCompleteTextActivity.class);
     startActivity(intent);
   }
+
+  /**
+   * test Spinner Animation
+   */
+  private void goToTheFifthExample() {
+    Intent intent = new Intent(this, SpinnerAnimationActivity.class);
+    startActivity(intent);
+  }
+
 
 
   @Override

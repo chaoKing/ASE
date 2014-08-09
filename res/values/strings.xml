@@ -12,5 +12,7 @@
     <string name="title_activity_auto_complete_text">AutoCompleteTextActivity</string>
     <string name="autocompletetextview">AutoCompleteTextView</string>
     <string name="multiautocompletetextview">MultiAutoCompleteTextView</string>
+    <string name="spinner">spinner</string>
+    <string name="title_activity_spinner_animation">SpinnerAnimationActivity</string>
 
 </resources>

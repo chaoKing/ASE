@@ -7,7 +7,7 @@ package scau.chao.ase.dragimage;
 
 import scau.chao.ase.R;
 import android.app.Activity;
-import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -26,11 +26,19 @@ public class ImageAdapter extends BaseAdapter {
   private int[] myImageIds = {R.drawable.guide_1_1, R.drawable.guide_2_1, R.drawable.guide_3_1,
       R.drawable.guide_4_1}; // 使用android.R.drawable里的图片作为图库来源，类型为整数数组
 
+  private int mTheme;
+
   /**
    * @param Activity
    */
   public ImageAdapter(Activity activity) {
     this.activity = activity;
+
+    TypedArray array = activity.obtainStyledAttributes(R.styleable.Gallery);
+
+    mTheme = array.getResourceId(R.styleable.Gallery_android_galleryItemBackground, 0);
+
+    array.recycle();
   }
 
   /*
@@ -78,6 +86,7 @@ public class ImageAdapter extends BaseAdapter {
     i.setImageResource(this.myImageIds[position % myImageIds.length]);
     i.setScaleType(ImageView.ScaleType.FIT_XY);
     i.setLayoutParams(new Gallery.LayoutParams(width, height));
+    i.setBackgroundResource(mTheme);
     return i;
   }
 
