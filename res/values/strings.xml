@@ -20,5 +20,7 @@
     <string name="one">one</string>
     <string name="two">two</string>
     <string name="three">three</string>
+    <string name="shrink">缩小</string>
+    <string name="magnify">放大</string>
 
 </resources>

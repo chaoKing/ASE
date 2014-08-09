@@ -55,6 +55,10 @@
             android:name="scau.chao.ase.playguessplacard.PlayGuessPlacardActivity"
             android:label="@string/title_activity_play_guess_placard" >
         </activity>
+        <activity
+            android:name="scau.chao.ase.magnifyshrinkimage.MagnifyShrinkImageActivity"
+            android:label="MagnifyShrinkImageActivity" >
+        </activity>
     </application>
 
 </manifest>

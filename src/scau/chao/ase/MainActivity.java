@@ -8,6 +8,7 @@ package scau.chao.ase;
 import scau.chao.ase.autocompletetext.AutoCompleteTextActivity;
 import scau.chao.ase.dragimage.DragImageActivity;
 import scau.chao.ase.edittextsearch.EditTextSearchActivity;
+import scau.chao.ase.magnifyshrinkimage.MagnifyShrinkImageActivity;
 import scau.chao.ase.playguessplacard.PlayGuessPlacardActivity;
 import scau.chao.ase.spinneranimation.SpinnerAnimationActivity;
 import android.app.AlertDialog;
@@ -38,7 +39,8 @@ public class MainActivity extends ActionBarActivity {
   private ListView listView;
 
   private static final String[] STRINGS = new String[] {"Drag Image Gallery", "Choose Dialog",
-      "Check EditText", "Auto Complete Text", "Spinner Animation", "Play Guess Placard"};
+      "Check EditText", "Auto Complete Text", "Spinner Animation", "Play Guess Placard",
+      "Magnify Shrink Image"};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -74,11 +76,15 @@ public class MainActivity extends ActionBarActivity {
           case 5:
             goToTheSixthExample();
             break;
+          case 6:
+            goToTheSeventhExample();
+            break;
           default:
             break;
         }
 
       }
+
     });
   }
 
@@ -156,6 +162,15 @@ public class MainActivity extends ActionBarActivity {
    */
   private void goToTheSixthExample() {
     Intent intent = new Intent(this, PlayGuessPlacardActivity.class);
+    startActivity(intent);
+  }
+
+
+  /**
+   * 放大缩小图片
+   */
+  private void goToTheSeventhExample() {
+    Intent intent = new Intent(this, MagnifyShrinkImageActivity.class);
     startActivity(intent);
   }
 
