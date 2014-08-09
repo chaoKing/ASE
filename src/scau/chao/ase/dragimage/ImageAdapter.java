@@ -75,8 +75,8 @@ public class ImageAdapter extends BaseAdapter {
   public View getView(int position, View convertView, ViewGroup parent) {
     DisplayMetrics mDisplayMetrics = new DisplayMetrics();
     activity.getWindowManager().getDefaultDisplay().getMetrics(mDisplayMetrics);
-    int width = mDisplayMetrics.widthPixels;
-    int height = mDisplayMetrics.heightPixels;
+    int width = (int) (mDisplayMetrics.widthPixels * 0.7);
+    int height = (int) (mDisplayMetrics.heightPixels * 0.7);
 
     if (position < 0) {
       position = -position;

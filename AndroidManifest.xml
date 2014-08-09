@@ -37,8 +37,7 @@
         </activity>
         <activity
             android:name="scau.chao.ase.dragimage.DragImageActivity"
-            android:label="@string/gallery"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:label="@string/gallery" >
         </activity>
         <activity
             android:name="scau.chao.ase.edittextsearch.EditTextSearchActivity"
