@@ -11,6 +11,7 @@ import scau.chao.ase.edittextsearch.EditTextSearchActivity;
 import scau.chao.ase.magnifyshrinkimage.MagnifyShrinkImageActivity;
 import scau.chao.ase.playguessplacard.PlayGuessPlacardActivity;
 import scau.chao.ase.rotateimage.RotateImageActivity;
+import scau.chao.ase.slidingdrawer.SlidingDrawerActivity;
 import scau.chao.ase.spinneranimation.SpinnerAnimationActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -41,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
 
   private static final String[] STRINGS = new String[] {"Drag Image Gallery", "Choose Dialog",
       "Check EditText", "Auto Complete Text", "Spinner Animation", "Play Guess Placard",
-      "Magnify Shrink Image", "Rotate Image"};
+      "Magnify Shrink Image", "Rotate Image", "Sliding Drawer"};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +83,9 @@ public class MainActivity extends ActionBarActivity {
             break;
           case 7:
             goToTheEighthExample();
+            break;
+          case 8:
+            goToTheTenthExample();
             break;
           default:
             break;
@@ -185,6 +189,14 @@ public class MainActivity extends ActionBarActivity {
    */
   private void goToTheEighthExample() {
     Intent intent = new Intent(this, RotateImageActivity.class);
+    startActivity(intent);
+  }
+
+  /**
+   * 旋转图片
+   */
+  private void goToTheTenthExample() {
+    Intent intent = new Intent(this, SlidingDrawerActivity.class);
     startActivity(intent);
   }
 

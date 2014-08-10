@@ -63,6 +63,10 @@
             android:name="scau.chao.ase.rotateimage.RotateImageActivity"
             android:label="@string/title_activity_rotate_image" >
         </activity>
+        <activity
+            android:name="scau.chao.ase.slidingdrawer.SlidingDrawerActivity"
+            android:label="@string/title_activity_sliding_drawer" >
+        </activity>
     </application>
 
 </manifest>

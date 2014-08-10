@@ -28,5 +28,6 @@
     <string name="title_activity_rotate_image">RotateImageActivity</string>
     <string name="down">down</string>
     <string name="bigger">bigger</string>
+    <string name="title_activity_sliding_drawer">SlidingDrawerActivity</string>
 
 </resources>
